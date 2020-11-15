@@ -83,7 +83,7 @@ func (s *Server) registerRoutes() http.Handler {
 	r.Get("/relationships/roster/server:{id}/bvip/1,3", s.relationshipHandler)
 
 	r.HandleFunc("/nucleus/entitlements/{heroID}", s.entitlementsHandler)
-	r.HandleFunc("/nucleus/refundAbilities/{heroID}", s.walletsHandler)
+	r.HandleFunc("/nucleus/wallets/{heroID}", s.walletsHandler)
 	r.HandleFunc("/nucleus/wallets/{heroID}", s.walletsHandler)
 	r.HandleFunc("/ofb/products", s.offersHandler)
 	r.HandleFunc("/en/game/store", s.store)
